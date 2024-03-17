@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.mynavigation.databinding.FragmentCategoryBinding
 
-// TODO: peroses pengriman data dengan bundel
+// TODO: peroses pengriman data dengan safeArgs
 class CategoryFragment : Fragment() {
 
     private var _binding : FragmentCategoryBinding? = null
@@ -37,12 +37,11 @@ class CategoryFragment : Fragment() {
 
         binding.btnCategoryLifestayle.setOnClickListener{
 
-            //mengirim data dengan bundel
-            view-> val mBundel = Bundle()
-
-            mBundel.putString(EXTRA_NAME , "Nike")
-            mBundel.putLong(EXTRA_STOCK, 7)
-            view.findNavController().navigate(R.id.action_categoryFragment_to_detailCategoryFragment,mBundel)
+            //mengirimkan data dengan safeArgs
+            val toDetailCategoryFragment = CategoryFragmentDirections.actionCategoryFragmentToDetailCategoryFragment()
+            toDetailCategoryFragment.name = "Adidas"
+            toDetailCategoryFragment.stock = 7
+            view.findNavController().navigate(toDetailCategoryFragment)
         }
     }
 

@@ -35,5 +35,23 @@
         android:id="@+id/detailCategoryFragment"
         android:name="com.example.mynavigation.DetailCategoryFragment"
         android:label="fragment_detail_category"
-        tools:layout="@layout/fragment_detail_category" />
+        tools:layout="@layout/fragment_detail_category" >
+
+<!--        menambahkan argument dan default value-->
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="default name" />
+        <argument android:name="stock"
+            app:argType="long"
+            android:defaultValue="0L" />
+
+<!--        menambahkan pop up behavior agar activity sebelumnya dihapuskan dan saat back akan keluar aplikasi-->
+        <action
+            android:id="@+id/action_detailCategoryFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
