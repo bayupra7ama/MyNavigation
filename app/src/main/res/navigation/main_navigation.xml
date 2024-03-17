@@ -21,10 +21,19 @@
         android:id="@+id/categoryFragment"
         android:name="com.example.mynavigation.CategoryFragment"
         android:label="fragment_category"
-        tools:layout="@layout/fragment_category" />
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_detailCategoryFragment"
+            app:destination="@id/detailCategoryFragment" />
+    </fragment>
     <activity
         android:id="@+id/profileActivoty"
         android:name="com.example.mynavigation.profileActivoty"
         android:label="activity_profile_activoty"
         tools:layout="@layout/activity_profile_activoty" />
+    <fragment
+        android:id="@+id/detailCategoryFragment"
+        android:name="com.example.mynavigation.DetailCategoryFragment"
+        android:label="fragment_detail_category"
+        tools:layout="@layout/fragment_detail_category" />
 </navigation>
