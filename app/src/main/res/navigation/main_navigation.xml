@@ -10,12 +10,20 @@
         android:name="com.example.mynavigation.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+
+
         <action
             android:id="@+id/action_homeFragment_to_categoryFragment"
-            app:destination="@id/categoryFragment" />
+            app:destination="@id/categoryFragment"
+            />
+        <!--     menambahkna animasi saat berpindah fragment   -->
         <action
             android:id="@+id/action_homeFragment_to_profileActivoty"
-            app:destination="@id/profileActivoty" />
+            app:destination="@id/profileActivoty"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            />
     </fragment>
     <fragment
         android:id="@+id/categoryFragment"

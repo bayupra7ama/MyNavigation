@@ -40,7 +40,7 @@ class CategoryFragment : Fragment() {
             //mengirimkan data dengan safeArgs
             val toDetailCategoryFragment = CategoryFragmentDirections.actionCategoryFragmentToDetailCategoryFragment()
             toDetailCategoryFragment.name = "Adidas"
-            toDetailCategoryFragment.stock = 7
+            toDetailCategoryFragment.stock = 8
             view.findNavController().navigate(toDetailCategoryFragment)
         }
     }
